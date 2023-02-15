@@ -1,5 +1,5 @@
 /*
- Exercício 3: Faça alterações no Exercício 2,
+ ExercÃ­cio 3: FaÃ§a alteraÃ§Ãµes no ExercÃ­cio 2,
 de forma a acrescentar as seguintes
 funcionalidades no MENU:
 5 - Pesquisa nome de cliente
@@ -67,13 +67,18 @@ return x;
 void mostrarPoltronas(){
 
     system("cls");
+    printf("1 -> Poltrona livre.\n");
+    printf("2 -> Poltrona reservada\n");
+    printf("3 -> Poltrona comprada\n");
+    printf("4 -> Poltrona bloqueada\n\n");
+
     for(int i=0; i<7; i++){
         for(int j=0; j<7; j++){
             printf("%d ", poltronas[i][j].status);
         }
         printf("\n");
     }
-
+    printf("\n\n");
 }
 
 void sistemaMenu(int x){
@@ -88,16 +93,16 @@ char nome[50];
                         soma += poltronas[i][j].valor;
                     }
                 }
-                printf("O valor total da bilheteria é: R$ %.2f\n", soma);
+                printf("O valor total da bilheteria Ã©: R$ %.2f\n", soma);
 
         }else if(x == 5){
-            printf("Digite o nome do cliente, considere letras maiúsculas e minúsculas.\n> ");
+            printf("Digite o nome do cliente, considere letras maiÃºsculas e minÃºsculas.\n> ");
             scanf("%s", nome);
             for(int i=0; i<7; i++){
                 for(int j=0; j<7; j++){
                     if( strcmp(nome, poltronas[i][j].nome) == 0 ){
                         printf("Existe um cliente com o nome %s.\n", nome);
-                        printf("A poltrona do cliente está na linha %d e coluna %d.\n",i+1,j+1);
+                        printf("A poltrona do cliente estÃ¡ na linha %d e coluna %d.\n",i+1,j+1);
                     }
                 }
             }
@@ -112,7 +117,7 @@ char nome[50];
 
             system("cls");
             if(poltronas[linha][coluna].status != 1){
-                printf("Poltrona inválida para uso.\n");
+                printf("Poltrona invÃ¡lida para uso.\n");
             }else{
                 printf("Digite o seu nome:\n> ");
                 scanf(" %49[^\n]", nome);
