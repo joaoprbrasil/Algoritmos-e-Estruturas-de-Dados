@@ -1,3 +1,6 @@
-arvore
-INSERIR; bola
-BUSCAR; bola
+lista
+REMOVER; bola
+IMPRIMIR
+INSERIR; casa
+IMPRIMIR;
+BUSCAR; colher
