@@ -1,0 +1,3 @@
+arvore
+INSERIR; bola
+BUSCAR; bola
