@@ -10,7 +10,7 @@ public class questao3{
     public static int getGap(int gap){
         gap /= 1.3;
         if(gap < 1)
-            gap = 1;
+            gap = 1; //testte
         return gap;
     }
     
