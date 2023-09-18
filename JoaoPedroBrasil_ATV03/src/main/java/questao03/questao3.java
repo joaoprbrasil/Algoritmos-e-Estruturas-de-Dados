@@ -1,22 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package questao03;
+import util.ListaDupla;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
-/**
- *
- * @author 20221SI0013
- */
-public class questao3 {
+public class questao3{
     public static int getGap(int gap){
         gap /= 1.3;
-        if(gap<1)
+        if(gap < 1)
             gap = 1;
         return gap;
     }
@@ -24,11 +17,11 @@ public class questao3 {
     public static void combSort(ListaDupla<Integer> lista){
         int gap = lista.getTamanho();
         boolean trocou = true;
-        while(gap != 1 || trocou  == true ){
+        while(gap != 1 || trocou){
             gap = getGap(gap);
             trocou = false;
             for(int i = 0; i < lista.getTamanho() - gap; i++){
-                if((int) lista.get(i).getElem() > (int) lista.get(i+gap).getElem()){
+                if((int) lista.get(i).getElem() > (int) lista.get(i + gap).getElem()){
                     int temp = (int) lista.get(i).getElem();
                     lista.get(i).setElem(lista.get(i + gap).getElem());
                     lista.get(i + gap).setElem(temp);
@@ -53,13 +46,12 @@ public class questao3 {
 
         combSort(lista);
 
-        if(lista.getTamanho()%2==0){
-            int meio1 = (int) lista.get(lista.getTamanho()/2).getElem();
+        if(lista.getTamanho() % 2 == 0){
+            int meio1 = (int) lista.get(lista.getTamanho() / 2).getElem();
             int meio2 = (int) lista.get((lista.getTamanho() / 2) - 1).getElem();
             System.out.println((double)(meio1 + meio2) / 2);
         }
         else
-            System.out.println(lista.get(lista.getTamanho()/2).getElem());
-
+            System.out.println(lista.get(lista.getTamanho() / 2).getElem());
     }
 }
