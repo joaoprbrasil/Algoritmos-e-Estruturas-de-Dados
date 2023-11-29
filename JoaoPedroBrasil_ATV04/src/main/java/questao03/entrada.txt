@@ -1,0 +1,4 @@
+20221SI0001;Joao;joao@hotmail.com;Curitiba
+20221SI0002;Pedro;pedro@outlock.com;Florianópolis
+20221SI0003;Ruas;ruas@yahoo.com;Porto Alegre
+20221SI0004;Brasil;brasil@proton.com;Distrito Federal

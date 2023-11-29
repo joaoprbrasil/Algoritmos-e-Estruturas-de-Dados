@@ -1,0 +1,6 @@
+SaoPaulo
+Fortaleza
+SaoPaulo;Rio;100
+Rio;Fortaleza;200
+Rio;Parana;20
+Parana;Fortaleza;20

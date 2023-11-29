@@ -1,0 +1,66 @@
+A função principal (main) inicia lendo o arquivo de entrada pela primeira vez, 
+contando a quantidade de linhas e colunas do labirinto. Essa etapa é crucial 
+para dimensionar corretamente a matriz labirinto. Posteriormente, o código 
+utiliza um segundo ciclo de leitura para preencher a matriz com os caracteres do
+labirinto, ao mesmo tempo em que armazena os números que servirão como índices 
+no grafo. Durante essa fase, o algoritmo imprime os caminhos numerados e as 
+paredes ('X').
+
+Após a criação e preenchimento da matriz labirinto, o código percorre essa 
+matriz identificando os pontos de interesse (A, E, S) e estabelecendo relações 
+de arestas no grafo com base nos índices correspondentes. As conexões 
+horizontais e verticais entre os pontos de interesse são verificadas, 
+adicionando arestas ao grafo que representam possíveis caminhos.
+
+Uma vez que o grafo foi construído, a função encontrarCaminho é chamada, 
+passando os índices correspondentes à entrada (E) e à saída (S) do labirinto.
+Essa função utiliza o grafo para encontrar um caminho entre os pontos de entrada
+e saída do labirinto.
+
+Este método encontrarCaminho realiza a busca em profundidade (DFS - Depth-First 
+Search) no grafo para encontrar um caminho entre dois vértices: inicio e destino
+
+    Parâmetros e inicialização:
+        O método recebe dois parâmetros do tipo TIPO que representam os vértices 
+        de início e destino.
+
+        Os vértices de início e destino são obtidos a partir do grafo usando o 
+        método getVertice.
+
+    Verificação de vértices de início e destino:
+        Verifica se os vértices de início e destino existem no grafo.
+
+        Se ambos existirem, continua; caso contrário, exibe uma mensagem 
+        indicando que um ou ambos os vértices não foram encontrados.
+
+    Busca em profundidade (DFS):
+        Inicializa uma pilha (caminho) para rastrear o caminho percorrido 
+        durante a busca.
+
+        Inicializa um conjunto (visitados) para acompanhar os vértices visitados
+
+        Chama a função recursiva dfs para realizar a busca em profundidade a 
+        partir do vértice de início em direção ao vértice de destino.
+
+    Exibição do caminho encontrado:
+        Se um caminho é encontrado, imprime "Caminho encontrado:".
+
+        Desempilha e imprime os vértices do caminho até o destino, apresentando 
+        o caminho de volta (do destino ao início).
+
+    Mensagem em caso de caminho não encontrado:
+        Se não é possível encontrar um caminho, exibe a mensagem "Caminho não 
+        encontrado."
+
+O método utiliza a abordagem de busca em profundidade para explorar os caminhos 
+no grafo a partir do vértice de início até o vértice de destino. O caminho é 
+armazenado em uma pilha, permitindo a fácil impressão do caminho de volta. Se o 
+vértice de destino não é alcançado durante a busca, é indicado que nenhum 
+caminho foi encontrado.
+
+Em resumo, o código realiza uma primeira leitura do arquivo para contabilizar as
+linhas e colunas, dimensiona a matriz labirinto e, em uma segunda leitura, 
+preenche a matriz, cria o grafo e estabelece as conexões entre os pontos de 
+interesse. Em seguida, o algoritmo utiliza o grafo para encontrar um caminho 
+entre a entrada e a saída do labirinto, imprimindo visualmente o labirinto no 
+console com caminhos numerados e paredes ('X').

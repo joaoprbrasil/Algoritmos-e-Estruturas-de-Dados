@@ -1,0 +1,48 @@
+A classe Aresta representa uma aresta ponderada entre dois vértices em um grafo.
+Cada aresta possui um peso (distância), um vértice de início e um vértice de 
+destino. Os métodos acessores e modificadores são fornecidos para obter e 
+ajustar o peso, o vértice de início e o vértice de destino da aresta.
+
+A classe Vertice representa um vértice em um grafo. Cada vértice possui um dado
+(valor), uma lista de arestas de entrada e uma lista de arestas de saída. Os 
+métodos acessores e modificadores são fornecidos para obter e ajustar o dado do 
+vértice, além de adicionar arestas à lista de entrada ou saída. Essa estrutura é
+essencial para a representação e manipulação de grafos em um contexto mais amplo.
+
+Explicação dos métodos da classe Grafo:
+
+    adicionarAresta(Double peso, TIPO dadoInicio, TIPO dadoFim, boolean direcionado):
+        Cria uma aresta com o peso especificado entre os vértices de início e fim.
+        Adiciona a aresta à lista de arestas.
+        Adiciona a aresta à lista de arestas de saída do vértice de início.
+        Adiciona a aresta à lista de arestas de entrada do vértice de fim.
+        Se o grafo não for direcionado, adiciona uma aresta na direção oposta.
+
+    getVertice(TIPO dado):
+        Itera sobre a lista de vértices procurando um vértice com o dado especificado.
+        Retorna o vértice se encontrado, ou null se não encontrado.
+
+    buscaEmLargura():
+        Utiliza uma fila para realizar a busca em largura.
+        Marca cada vértice visitado para evitar repetições.
+        Imprime os vértices na ordem em que são visitados.
+
+    removerVertice(TIPO dado):
+        Encontra o vértice com o dado especificado.
+        Remove todas as arestas associadas a esse vértice.
+        Remove o vértice da lista de vértices.
+
+    removerAresta(TIPO dadoInicio, TIPO dadoFim):
+        Encontra os vértices de início e fim da aresta.
+        Encontra a aresta correspondente na lista de arestas.
+        Remove a aresta das listas de arestas dos vértices e da lista de arestas do grafo.
+
+    pesquisarVertice(TIPO dado):
+        Itera sobre a lista de vértices procurando um vértice com o dado especificado.
+        Imprime se o vértice foi encontrado ou não.
+
+    pesquisarAresta(TIPO dadoInicio, TIPO dadoFim):
+        Encontra os vértices de início e fim da aresta.
+        Itera sobre a lista de arestas procurando uma
+
+Os outros métodos são explicados dentro dos pacotes de cada questão que os utiliza.

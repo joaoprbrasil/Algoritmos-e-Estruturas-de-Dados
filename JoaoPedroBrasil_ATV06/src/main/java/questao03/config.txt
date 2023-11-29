@@ -1,0 +1,28 @@
+O método temCicloOrdenacaoTopologica utiliza uma pilha para realizar a ordenação
+topológica enquanto verifica a presença de ciclos.
+
+    temCicloOrdenacaoTopologica: Este método é responsável por iterar sobre 
+    todos os vértices do grafo e chamar temCicloOrdenacaoTopologicaAux para 
+    cada vértice não visitado. Se a função auxiliar detecta um ciclo, o método 
+    retorna verdadeiro; caso contrário, retorna falso.
+
+    temCicloOrdenacaoTopologicaAux: Esta função é uma adaptação da lógica de 
+    busca em profundidade (DFS) para encontrar ciclos. Para cada vértice, ele o 
+    marca como visitado e o coloca na pilha. Em seguida, para cada vizinho não 
+    visitado, a função é chamada recursivamente. Se um vizinho já foi visitado 
+    e está na pilha, isso indica a presença de um ciclo, e a função retorna 
+    verdadeiro.
+
+    ordenacaoTopologica: Este método realiza a ordenação topológica do grafo 
+    chamando ordenacaoTopologicaAux para cada vértice não visitado. O resultado 
+    é uma pilha contendo a ordenação topológica dos vértices.
+
+    ordenacaoTopologicaAux: Esta função é responsável por realizar a ordenação 
+    topológica a partir de um vértice específico. Ela marca o vértice como 
+    visitado e, em seguida, chama recursivamente a função para cada vizinho não 
+    visitado. Após visitar todos os vizinhos, o vértice é empilhado.
+
+Se, durante a execução da ordenação topológica, a função temCicloOrdenacaoTopologicaAux
+detecta um ciclo, a mensagem "Ciclo detectado!" é exibida, e o método 
+correspondente retorna verdadeiro. Caso contrário, a mensagem "Nenhum ciclo 
+detectado." é exibida, e o método retorna falso.

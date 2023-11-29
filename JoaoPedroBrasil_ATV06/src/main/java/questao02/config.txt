@@ -1,0 +1,31 @@
+ O algoritmo utiliza uma abordagem de busca em profundidade (DFS - Depth-First 
+Search) para percorrer o grafo.
+
+A ideia principal é manter dois conjuntos, visitados e pilha, para rastrear os 
+vértices visitados durante a busca e os vértices presentes na pilha de chamadas 
+recursivas. A função temCiclo itera sobre todos os vértices do grafo e chama a 
+função auxiliar temCicloAux para verificar se há um ciclo a partir de cada 
+vértice.
+
+A função temCicloAux recebe um vértice, o conjunto de vértices visitados 
+(visitados) e o conjunto de vértices na pilha (pilha). Aqui estão os passos 
+principais:
+
+    Se o vértice está na pilha, isso significa que encontramos um ciclo, e a 
+    função retorna verdadeiro.
+
+    Se o vértice já foi visitado, não há necessidade de continuar a busca a 
+    partir desse vértice, então a função retorna falso.
+
+    Adiciona o vértice aos conjuntos visitados e pilha.
+
+    Para cada aresta de saída do vértice, chama recursivamente a função 
+    temCicloAux para o vértice de destino.
+
+    Remove o vértice da pilha antes de retornar da função.
+
+Se em algum momento durante a busca recursiva, um vértice é encontrado na pilha,
+então um ciclo foi detectado, e a função retorna verdadeiro.
+
+Se nenhum ciclo for encontrado após a verificação de todos os vértices, a função
+temCiclo retorna falso.

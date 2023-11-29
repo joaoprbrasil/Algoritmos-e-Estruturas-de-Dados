@@ -1,0 +1,51 @@
+O código inicia lendo informações de um arquivo para construir o grafo ponderado
+Em seguida, o algoritmo de Floyd-Warshall é aplicado ao grafo para encontrar o 
+menor caminho entre uma origem e um destino previamente definidos.
+
+No pdf das questões fiquei em duvida se os dados eram dividos por ";" ou por "; "
+então criei um método chamado caractereSplit que verifica qual dos dois modos 
+está sendo usado.
+
+Explicação do meu método Floyd-Warshall:
+
+    Inicialização das Matrizes:
+
+        Duas matrizes são inicializadas: distancias para armazenar as distâncias
+        entre os vértices e proximo para rastrear os próximos vértices no 
+        caminho mínimo.
+
+        A matriz distancias é preenchida com infinito para representar 
+        distâncias desconhecidas, exceto para os casos onde o vértice de origem
+        é igual ao vértice de destino, onde a distância é definida como zero.
+
+        A matriz proximo é preenchida com -1 para indicar que os próximos 
+        vértices são desconhecidos.
+
+    Preenchimento com Distâncias Conhecidas:
+        
+        A matriz distancias é preenchida com as distâncias conhecidas entre os 
+        vértices com base nas arestas do grafo.
+
+    Algoritmo de Floyd-Warshall:
+
+        O algoritmo é aplicado para atualizar as matrizes distancias e proximo, 
+        considerando a possibilidade de obter caminhos mais curtos através de 
+        vértices intermediários.
+
+    Impressão do Caminho Mínimo:
+
+        O método imprimirCaminho é chamado para mostrar o caminho mínimo entre 
+        os vértices de origem e destino, considerando as matrizes atualizadas.
+
+    imprimirCaminho:
+
+        Encontra os índices dos vértices de origem e destino no grafo.
+
+        Se não houver caminho, exibe uma mensagem informando que não há caminho 
+        entre os vértices.
+
+        Caso contrário, reconstrói e imprime o caminho mínimo em termos de 
+        vértices e pesos de arestas.
+
+        Finalmente, mostra a distância total do menor caminho entre origem e 
+        destino.
